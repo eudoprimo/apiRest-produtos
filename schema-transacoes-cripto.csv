@@ -1,0 +1,12 @@
+Nome do Campo,Descrição,Tipo,Obrigatório,Rastreável,Valores Permitidos,Exemplo de Valor
+preco,Valor da transação em reais,number,Sim,Sim,Número positivo com ponto decimal,100000.75
+quantidade_de_moedas,Quantidade de moedas negociadas,number,Sim,Sim,Número positivo com ponto decimal,2.5
+criacao_ordem,Data e hora de criação da ordem,datetime,Sim,Sim,Formato ISO 8601 (YYYY-MM-DDTHH:MM:SSZ),2026-03-23T14:00:00Z
+confirmacao_ordem,Data e hora de confirmação da ordem,datetime,Sim,Sim,Formato ISO 8601 (YYYY-MM-DDTHH:MM:SSZ),2026-03-23T14:30:00Z
+tipo_transacao,Tipo da transação: débito ou crédito,string,Sim,Sim,debito | credito,debito
+id_usuario,Identificador único do usuário,string,Sim,Sim,Texto alfanumérico único,user12345
+tipo_ordem,Tipo de ordem: compra ou venda,string,Sim,Sim,compra | venda,compra
+tipo_ativo,Tipo da moeda negociada,string,Sim,Sim,Sigla da moeda em maiúsculas (BTC|ETH|USDT),BTC
+id_ordem,Identificador único da ordem,string,Sim,Sim,Texto alfanumérico único,ord56789
+status_ordem,Status atual da operação,string,Sim,Sim,pendente | processando | concluida | cancelada,concluida
+status_safer,Status da operação no sistema Safer,string,Sim,Sim,aprovado | reprovado | em_analise | pendente,aprovado
