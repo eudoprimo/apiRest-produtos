@@ -1,0 +1,13 @@
+{
+  "preco": 100000.75,
+  "quantidade_de_moedas": 2.5,
+  "criacao_ordem": "2026-03-23T14:00:00Z",
+  "confirmacao_ordem": "2026-03-23T14:30:00Z",
+  "tipo_transacao": "debito",
+  "id_usuario": "user12345",
+  "tipo_ordem": "compra",
+  "tipo_ativo": "BTC",
+  "id_ordem": "ord56789",
+  "status_ordem": "concluida",
+  "status_safer": "aprovado"
+}
