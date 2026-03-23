@@ -1,0 +1,14 @@
+Nivel	Nome	Descricao	Tipo	Lista	object.required	brad.business.label	any.enum	any.const
+0	body	Dados de entrada e saída do evento de transação cripto	object	false	true		
+1	transacao	Subobjeto contendo os dados da transação de criptoativo	object	false	true	transacao		
+2	preco	Valor da transação. Usar ponto como separador decimal (ex.: 100000.75).	number	false	true	preco		
+2	quantidadeDeMoedas	Quantidade de moedas negociadas na ordem.	number	false	true	quantidadeDeMoedas		
+2	criacaoOrdem	Data e hora de criação da ordem (formato ISO 8601, ex.: 2026-03-23T14:00:00Z).	string	false	true	criacaoOrdem		
+2	confirmacaoOrdem	Data e hora de confirmação da ordem (formato ISO 8601).	string	false	true	confirmacaoOrdem		
+2	tipoTransacao	Tipo da transação: debito ou credito.	string	false	true	tipoTransacao	debito|credito	
+2	idUsuario	Identificador do usuário (ID interno/externo).	string	false	true	idUsuario		
+2	tipoOrdem	Tipo de ordem: compra ou venda.	string	false	true	tipoOrdem	compra|venda	
+2	tipoAtivo	Símbolo do ativo/moeda negociado (ex.: BTC, ETH, USDT).	string	false	true	tipoAtivo	BTC|ETH|USDT	
+2	idOrdem	Identificador único da ordem.	string	false	true	idOrdem		
+2	statusOrdem	Status da operação no sistema.	string	false	true	statusOrdem	criada|confirmada|cancelada|falha	
+2	statusSafer	Status da operação no Safer.	string	false	true	statusSafer	aprovado|reprovado|pendente	
