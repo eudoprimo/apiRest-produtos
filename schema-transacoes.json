@@ -1,0 +1,83 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Schema de Transação de Criptomoedas",
+  "description": "Schema para validação de transações de compra e venda de criptomoedas",
+  "type": "object",
+  "required": [
+    "preco",
+    "quantidade_de_moedas",
+    "criacao_ordem",
+    "confirmacao_ordem",
+    "tipo_transacao",
+    "id_usuario",
+    "tipo_ordem",
+    "tipo_ativo",
+    "id_ordem",
+    "status_ordem",
+    "status_safer"
+  ],
+  "properties": {
+    "preco": {
+      "type": "number",
+      "description": "Valor da transação em reais",
+      "examples": [100000.75]
+    },
+    "quantidade_de_moedas": {
+      "type": "number",
+      "description": "Quantidade de moedas negociadas",
+      "examples": [2.50]
+    },
+    "criacao_ordem": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Data e hora de criação da ordem",
+      "examples": ["2026-03-23T14:00:00Z"]
+    },
+    "confirmacao_ordem": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Data e hora de confirmação da ordem",
+      "examples": ["2026-03-23T14:30:00Z"]
+    },
+    "tipo_transacao": {
+      "type": "string",
+      "enum": ["debito", "credito"],
+      "description": "Tipo da transação: debito ou credito",
+      "examples": ["debito"]
+    },
+    "id_usuario": {
+      "type": "string",
+      "description": "Identificador único do usuário",
+      "examples": ["user12345"]
+    },
+    "tipo_ordem": {
+      "type": "string",
+      "enum": ["compra", "venda"],
+      "description": "Tipo de ordem: compra ou venda",
+      "examples": ["compra"]
+    },
+    "tipo_ativo": {
+      "type": "string",
+      "description": "Tipo de criptomoeda negociada (ex: BTC, ETH, USDT)",
+      "examples": ["BTC"]
+    },
+    "id_ordem": {
+      "type": "string",
+      "description": "Identificador único da ordem",
+      "examples": ["ord56789"]
+    },
+    "status_ordem": {
+      "type": "string",
+      "enum": ["pendente", "processando", "concluida", "cancelada", "rejeitada"],
+      "description": "Status atual da operação",
+      "examples": ["concluida"]
+    },
+    "status_safer": {
+      "type": "string",
+      "enum": ["aprovado", "em_analise", "rejeitado", "pendente"],
+      "description": "Status da operação no sistema Safer",
+      "examples": ["aprovado"]
+    }
+  },
+  "additionalProperties": false
+}
