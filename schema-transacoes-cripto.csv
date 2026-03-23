@@ -1,0 +1,12 @@
+nome_campo,descricao,tipo_dado,tamanho,obrigatorio,rastreabilidade,dominio_valores,exemplo,observacoes
+preco,Valor monetário da transação de criptomoeda,DECIMAL,18_8,SIM,id_ordem,Valor positivo maior que zero,"0.00015000","Formato: até 8 casas decimais para suportar valores de criptomoedas. Ex.: 150000.00000000 ou 0.00015000"
+quantidade_de_moedas,Quantidade de moedas negociadas na transação,DECIMAL,18_8,SIM,id_ordem,Valor positivo maior que zero,"0.00100000","Quantidade de unidades da criptomoeda. Ex.: 0.00100000 BTC"
+criacao_ordem,Data e hora de criação da ordem de negociação,DATETIME,19,SIM,id_ordem,Formato ISO 8601,"2024-01-15T10:30:00","Formato: YYYY-MM-DDTHH:MM:SS (UTC). Ex.: 2024-01-15T10:30:00"
+confirmacao_ordem,Data e hora de confirmação/execução da ordem,DATETIME,19,NAO,id_ordem,Formato ISO 8601,"2024-01-15T10:30:05","Preenchido após confirmação. Formato: YYYY-MM-DDTHH:MM:SS (UTC)"
+tipo_transacao,Indica se a transação é de débito ou crédito na conta,STRING,6,SIM,id_ordem,"DEBITO|CREDITO","DEBITO","DEBITO = saída de recursos. CREDITO = entrada de recursos."
+id_usuario,Identificador único do usuário na plataforma,STRING,36,SIM,id_usuario,UUID v4,"usr-123e4567-e89b-12d3","Chave estrangeira para tabela de usuários."
+tipo_ordem,Indica o tipo da ordem: compra ou venda de criptomoeda,STRING,6,SIM,id_ordem,"COMPRA|VENDA","COMPRA","COMPRA = aquisição de ativos. VENDA = alienação de ativos."
+tipo_ativo,Tipo/símbolo da criptomoeda negociada,STRING,10,SIM,id_ordem,"BTC|ETH|USDT|BNB|SOL","BTC","Sigla oficial da criptomoeda. Ex.: BTC (Bitcoin), ETH (Ethereum)."
+id_ordem,Identificador único da ordem de negociação,STRING,36,SIM,id_ordem,UUID v4,"ord-550e8400-e29b-41d4","Chave primária da transação. Gerado automaticamente pela plataforma."
+status_ordem,Status atual da ordem de negociação,STRING,15,SIM,id_ordem,"PENDENTE|EXECUTADA|CANCELADA|EXPIRADA","PENDENTE","Ciclo: PENDENTE → EXECUTADA ou CANCELADA ou EXPIRADA."
+status_safer,Status da operação no sistema Safer (antifraude),STRING,15,SIM,id_ordem,"APROVADO|REPROVADO|PENDENTE|REVISAO","APROVADO","Resultado da análise antifraude pelo sistema Safer."
