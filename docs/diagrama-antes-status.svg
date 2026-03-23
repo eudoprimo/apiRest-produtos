@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="740" font-family="Consolas, 'Courier New', monospace" font-size="13">
+  <!-- Background -->
+  <rect width="860" height="740" fill="#1e1e2e" rx="10"/>
+  <text x="430" y="32" text-anchor="middle" fill="#cdd6f4" font-size="17" font-weight="bold">ANTES — BCSF_SRV_STATUS_RFQ_CL (body existente)</text>
+
+  <!-- Header row -->
+  <rect x="10" y="48" width="840" height="28" fill="#313244" rx="4"/>
+  <text x="20"  y="67" fill="#a6e3a1" font-weight="bold">level</text>
+  <text x="90"  y="67" fill="#a6e3a1" font-weight="bold">any.title</text>
+  <text x="290" y="67" fill="#a6e3a1" font-weight="bold">any.description</text>
+  <text x="550" y="67" fill="#a6e3a1" font-weight="bold">any.type</text>
+  <text x="640" y="67" fill="#a6e3a1" font-weight="bold">Lista</text>
+  <text x="700" y="67" fill="#a6e3a1" font-weight="bold">object.required</text>
+
+  <!-- Schema identifier row -->
+  <rect x="10" y="82" width="840" height="26" fill="#45475a" rx="3"/>
+  <text x="20"  y="99" fill="#cba6f7" font-style="italic">(blank)</text>
+  <text x="90"  y="99" fill="#cba6f7" font-weight="bold">BCSF_SRV_STATUS_RFQ_CL</text>
+  <text x="550" y="99" fill="#cba6f7">schema</text>
+  <text x="640" y="99" fill="#cba6f7">False</text>
+  <text x="700" y="99" fill="#cba6f7">False</text>
+
+  <!-- bradesco.rastreabilidade -->
+  <rect x="10" y="114" width="840" height="24" fill="#1e1e2e" rx="2"/>
+  <text x="20"  y="131" fill="#89b4fa">0</text>
+  <text x="90"  y="131" fill="#89b4fa">bradesco.rastreabilidade</text>
+  <text x="550" y="131" fill="#89b4fa">object</text>
+  <text x="640" y="131" fill="#89b4fa">false</text>
+  <text x="700" y="131" fill="#89b4fa">false</text>
+
+  <!-- schema.* rows condensed -->
+  <rect x="10" y="144" width="840" height="24" fill="#181825" rx="2"/>
+  <text x="20"  y="161" fill="#6c7086">1</text>
+  <text x="90"  y="161" fill="#6c7086">schema.contabil / schema.produto / … (7 linhas)</text>
+  <text x="550" y="161" fill="#6c7086">string</text>
+
+  <!-- attributes -->
+  <rect x="10" y="174" width="840" height="24" fill="#1e1e2e" rx="2"/>
+  <text x="20"  y="191" fill="#89b4fa">0</text>
+  <text x="90"  y="191" fill="#89b4fa">attributes</text>
+  <text x="290" y="191" fill="#89b4fa">Atributos adicionais</text>
+  <text x="550" y="191" fill="#89b4fa">object</text>
+  <text x="640" y="191" fill="#89b4fa">false</text>
+  <text x="700" y="191" fill="#89b4fa">true</text>
+
+  <!-- bradesco.auth / device rows condensed -->
+  <rect x="10" y="204" width="840" height="24" fill="#181825" rx="2"/>
+  <text x="20"  y="221" fill="#6c7086">1</text>
+  <text x="90"  y="221" fill="#6c7086">bradesco.auth.* / bradesco.device.* / bradesco.timestamp (12 linhas)</text>
+  <text x="550" y="221" fill="#6c7086">string</text>
+
+  <!-- Separator -->
+  <line x1="10" y1="234" x2="850" y2="234" stroke="#585b70" stroke-width="1" stroke-dasharray="5,3"/>
+
+  <!-- 0 body -->
+  <rect x="10" y="240" width="840" height="30" fill="#313244" rx="4" stroke="#fab387" stroke-width="2"/>
+  <text x="20"  y="260" fill="#fab387" font-weight="bold">0</text>
+  <text x="90"  y="260" fill="#fab387" font-weight="bold">body</text>
+  <text x="290" y="260" fill="#fab387">Dados de entrada e saída de log</text>
+  <text x="550" y="260" fill="#fab387" font-weight="bold">object</text>
+  <text x="640" y="260" fill="#fab387">false</text>
+  <text x="700" y="260" fill="#fab387" font-weight="bold">true</text>
+
+  <!-- ⬅ insertion point arrow -->
+  <rect x="10" y="276" width="840" height="28" fill="#313244" rx="4" stroke="#a6e3a1" stroke-width="2" stroke-dasharray="6,3"/>
+  <text x="430" y="295" text-anchor="middle" fill="#a6e3a1" font-weight="bold">⬅ INSERIR AQUI (antes de codigoTransacao)</text>
+
+  <!-- 1 codigoTransacao -->
+  <rect x="10" y="310" width="840" height="24" fill="#1e1e2e" rx="2"/>
+  <text x="20"  y="327" fill="#cdd6f4">1</text>
+  <text x="90"  y="327" fill="#cdd6f4">codigoTransacao</text>
+  <text x="290" y="327" fill="#cdd6f4">Codigo da transação…</text>
+  <text x="550" y="327" fill="#cdd6f4">string</text>
+  <text x="640" y="327" fill="#cdd6f4">false</text>
+  <text x="700" y="327" fill="#cdd6f4">true</text>
+
+  <!-- 1 mensagens -->
+  <rect x="10" y="340" width="840" height="24" fill="#181825" rx="2"/>
+  <text x="20"  y="357" fill="#cdd6f4">1</text>
+  <text x="90"  y="357" fill="#cdd6f4">mensagens</text>
+  <text x="290" y="357" fill="#cdd6f4">Mensagens de erro</text>
+  <text x="550" y="357" fill="#cdd6f4">object</text>
+  <text x="640" y="357" fill="#cdd6f4">true</text>
+  <text x="700" y="357" fill="#cdd6f4">false</text>
+
+  <!-- 2 codigo -->
+  <rect x="10" y="370" width="840" height="24" fill="#1e1e2e" rx="2"/>
+  <text x="20"  y="387" fill="#6c7086">2</text>
+  <text x="90"  y="387" fill="#6c7086">codigo</text>
+  <text x="290" y="387" fill="#6c7086">Campo de erro…</text>
+  <text x="550" y="387" fill="#6c7086">string</text>
+
+  <!-- 2 texto -->
+  <rect x="10" y="400" width="840" height="24" fill="#181825" rx="2"/>
+  <text x="20"  y="417" fill="#6c7086">2</text>
+  <text x="90"  y="417" fill="#6c7086">texto</text>
+  <text x="290" y="417" fill="#6c7086">Campo de erro…</text>
+  <text x="550" y="417" fill="#6c7086">string</text>
+
+  <!-- 1 retorno -->
+  <rect x="10" y="430" width="840" height="24" fill="#1e1e2e" rx="2"/>
+  <text x="20"  y="447" fill="#cdd6f4">1</text>
+  <text x="90"  y="447" fill="#cdd6f4">retorno</text>
+  <text x="290" y="447" fill="#cdd6f4">SUCESSO ou ERRO</text>
+  <text x="550" y="447" fill="#cdd6f4">string</text>
+  <text x="640" y="447" fill="#cdd6f4">false</text>
+  <text x="700" y="447" fill="#cdd6f4">true</text>
+
+  <!-- Separator -->
+  <line x1="10" y1="460" x2="850" y2="460" stroke="#585b70" stroke-width="1" stroke-dasharray="5,3"/>
+
+  <!-- 0 resource -->
+  <rect x="10" y="466" width="840" height="24" fill="#1e1e2e" rx="2"/>
+  <text x="20"  y="483" fill="#89b4fa">0</text>
+  <text x="90"  y="483" fill="#89b4fa">resource</text>
+  <text x="290" y="483" fill="#89b4fa">Origem do log</text>
+  <text x="550" y="483" fill="#89b4fa">object</text>
+  <text x="640" y="483" fill="#89b4fa">false</text>
+  <text x="700" y="483" fill="#89b4fa">true</text>
+
+  <!-- 1 service.name condensed -->
+  <rect x="10" y="496" width="840" height="24" fill="#181825" rx="2"/>
+  <text x="20"  y="513" fill="#6c7086">1</text>
+  <text x="90"  y="513" fill="#6c7086">service.name — INALTERADO (sem sub-campos neste schema)</text>
+
+  <!-- Legend -->
+  <rect x="10" y="540" width="840" height="190" fill="#181825" rx="6" stroke="#45475a" stroke-width="1"/>
+  <text x="430" y="562" text-anchor="middle" fill="#cdd6f4" font-weight="bold" font-size="14">Legenda — BCSF_SRV_STATUS_RFQ_CL</text>
+  <rect x="30" y="572" width="14" height="14" fill="#fab387" rx="2"/>
+  <text x="52" y="584" fill="#cdd6f4">Linha <tspan font-weight="bold">0 body</tspan> — âncora de inserção (NÃO alterar)</text>
+  <rect x="30" y="596" width="14" height="14" fill="#313244" stroke="#a6e3a1" stroke-width="2" stroke-dasharray="4,2" rx="2"/>
+  <text x="52" y="608" fill="#cdd6f4">Zona de inserção — cole as novas linhas aqui</text>
+  <rect x="30" y="620" width="14" height="14" fill="#45475a" rx="2"/>
+  <text x="52" y="632" fill="#cdd6f4">Linha de identificação do schema (any.type = schema)</text>
+  <text x="30" y="656" fill="#cba6f7" font-size="12" font-weight="bold">Diferença entre schemas:</text>
+  <text x="30" y="674" fill="#cdd6f4" font-size="12">STATUS_RFQ_CL: schema.logado = "Não" | resource sem sub-campos adicionais</text>
+  <text x="30" y="692" fill="#cdd6f4" font-size="12">CONFIRMACAO_RFQ_CL: schema.logado = "Sim" | resource tem request/ticket/application/saida</text>
+  <text x="30" y="716" fill="#89dceb" font-size="12">O procedimento de inserção é idêntico para ambos os schemas.</text>
+</svg>

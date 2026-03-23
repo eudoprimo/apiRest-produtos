@@ -1,0 +1,13 @@
+level	any.title	any.description	any.type	---	object.required	brad.business.label	any.enum	any.const	string.minLength	string.maxLength	string.pattern	numeric.minimum	numeric.maximum	numeric.multipleOf	numeric.exclusiveMinimum	numeric.exclusiveMaximum	array.minItems	array.maxItems	array.uniqueItems	array.minContains	array.maxContains	object.minProperties	object.maxProperties
+1	transacao	Dados da transação cripto	object	false	true	transacao																	
+2	preco	Valor da transação	number	false	true	preco						0											
+2	quantidade_de_moedas	Quantidade de moedas negociadas	number	false	true	quantidadeDeMoedas						0											
+2	criacao_ordem	Data/hora de criação da ordem (ISO 8601)	string	false	true	criacaoOrdem			1		^\d{4}-\d{2}-\d{2}T												
+2	confirmacao_ordem	Data/hora de confirmação da ordem (ISO 8601)	string	false	true	confirmacaoOrdem			1		^\d{4}-\d{2}-\d{2}T												
+2	tipo_transacao	Tipo da transação	string	false	true	tipoTransacao	debito|credito																
+2	id_usuario	Identificador do usuário	string	false	true	idUsuario			1														
+2	tipo_ordem	Tipo de ordem	string	false	true	tipoOrdem	compra|venda																
+2	tipo_ativo	Ativo/moeda (ex.: BTC)	string	false	true	tipoAtivo			1														
+2	id_ordem	Identificador único da ordem	string	false	true	idOrdem			1														
+2	status_ordem	Status da ordem	string	false	true	statusOrdem	criada|confirmada|cancelada|falha																
+2	status_safer	Status no Safer	string	false	true	statusSafer	aprovado|reprovado|pendente																
