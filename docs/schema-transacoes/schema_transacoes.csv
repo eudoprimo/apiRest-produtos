@@ -1,0 +1,12 @@
+campo,descricao,tipo,obrigatorio,rastreavel,exemplo
+preco,Valor unitário do ativo na transação,number,Sim,Sim,100000.75
+quantidade_de_moedas,Quantidade de moedas negociadas,number,Sim,Sim,2.5
+criacao_ordem,Data e hora de criação da ordem (ISO 8601),date,Sim,Sim,2026-03-23T14:00:00Z
+confirmacao_ordem,Data e hora de confirmação da ordem (ISO 8601),date,Sim,Sim,2026-03-23T14:30:00Z
+tipo_transacao,Tipo de movimentação financeira (debito ou credito),string,Sim,Sim,debito
+id_usuario,Identificador único do usuário,string,Sim,Sim,user12345
+tipo_ordem,Tipo de ordem executada (compra ou venda),string,Sim,Sim,compra
+tipo_ativo,Símbolo do ativo/criptomoeda negociada,string,Sim,Sim,BTC
+id_ordem,Identificador único da ordem,string,Sim,Sim,ord56789
+status_ordem,Status atual da ordem (ex: concluida),string,Sim,Sim,concluida
+status_safer,Status da verificação no sistema Safer (ex: aprovado),string,Sim,Sim,aprovado
