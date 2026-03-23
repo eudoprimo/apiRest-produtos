@@ -1,0 +1,100 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "body",
+  "description": "Dados de entrada e saída do evento de transação cripto",
+  "type": "object",
+  "required": ["transacao"],
+  "properties": {
+    "transacao": {
+      "title": "transacao",
+      "description": "Subobjeto contendo os dados da transação de criptoativo",
+      "type": "object",
+      "required": [
+        "preco",
+        "quantidadeDeMoedas",
+        "criacaoOrdem",
+        "confirmacaoOrdem",
+        "tipoTransacao",
+        "idUsuario",
+        "tipoOrdem",
+        "tipoAtivo",
+        "idOrdem",
+        "statusOrdem",
+        "statusSafer"
+      ],
+      "properties": {
+        "preco": {
+          "title": "preco",
+          "description": "Valor da transação. Usar ponto como separador decimal (ex.: 100000.75).",
+          "type": "number",
+          "brad.business.label": "preco"
+        },
+        "quantidadeDeMoedas": {
+          "title": "quantidadeDeMoedas",
+          "description": "Quantidade de moedas negociadas na ordem.",
+          "type": "number",
+          "brad.business.label": "quantidadeDeMoedas"
+        },
+        "criacaoOrdem": {
+          "title": "criacaoOrdem",
+          "description": "Data e hora de criação da ordem (formato ISO 8601, ex.: 2026-03-23T14:00:00Z).",
+          "type": "string",
+          "brad.business.label": "criacaoOrdem"
+        },
+        "confirmacaoOrdem": {
+          "title": "confirmacaoOrdem",
+          "description": "Data e hora de confirmação da ordem (formato ISO 8601).",
+          "type": "string",
+          "brad.business.label": "confirmacaoOrdem"
+        },
+        "tipoTransacao": {
+          "title": "tipoTransacao",
+          "description": "Tipo da transação: debito ou credito.",
+          "type": "string",
+          "enum": ["debito", "credito"],
+          "brad.business.label": "tipoTransacao"
+        },
+        "idUsuario": {
+          "title": "idUsuario",
+          "description": "Identificador do usuário (ID interno/externo).",
+          "type": "string",
+          "brad.business.label": "idUsuario"
+        },
+        "tipoOrdem": {
+          "title": "tipoOrdem",
+          "description": "Tipo de ordem: compra ou venda.",
+          "type": "string",
+          "enum": ["compra", "venda"],
+          "brad.business.label": "tipoOrdem"
+        },
+        "tipoAtivo": {
+          "title": "tipoAtivo",
+          "description": "Símbolo do ativo/moeda negociado (ex.: BTC, ETH, USDT).",
+          "type": "string",
+          "enum": ["BTC", "ETH", "USDT"],
+          "brad.business.label": "tipoAtivo"
+        },
+        "idOrdem": {
+          "title": "idOrdem",
+          "description": "Identificador único da ordem.",
+          "type": "string",
+          "brad.business.label": "idOrdem"
+        },
+        "statusOrdem": {
+          "title": "statusOrdem",
+          "description": "Status da operação no sistema.",
+          "type": "string",
+          "enum": ["criada", "confirmada", "cancelada", "falha"],
+          "brad.business.label": "statusOrdem"
+        },
+        "statusSafer": {
+          "title": "statusSafer",
+          "description": "Status da operação no Safer.",
+          "type": "string",
+          "enum": ["aprovado", "reprovado", "pendente"],
+          "brad.business.label": "statusSafer"
+        }
+      }
+    }
+  }
+}
