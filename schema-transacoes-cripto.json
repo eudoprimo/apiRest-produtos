@@ -1,0 +1,98 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Schema de Transações de Criptomoedas",
+  "description": "Schema para validação de transações de criptomoedas",
+  "type": "object",
+  "required": [
+    "preco",
+    "quantidade_de_moedas",
+    "criacao_ordem",
+    "confirmacao_ordem",
+    "tipo_transacao",
+    "id_usuario",
+    "tipo_ordem",
+    "tipo_ativo",
+    "id_ordem",
+    "status_ordem",
+    "status_safer"
+  ],
+  "properties": {
+    "preco": {
+      "type": "number",
+      "description": "Valor da transação em reais",
+      "minimum": 0,
+      "example": 100000.75,
+      "rastreavel": true
+    },
+    "quantidade_de_moedas": {
+      "type": "number",
+      "description": "Quantidade de moedas negociadas",
+      "minimum": 0,
+      "example": 2.5,
+      "rastreavel": true
+    },
+    "criacao_ordem": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Data e hora de criação da ordem no formato ISO 8601",
+      "example": "2026-03-23T14:00:00Z",
+      "rastreavel": true
+    },
+    "confirmacao_ordem": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Data e hora de confirmação da ordem no formato ISO 8601",
+      "example": "2026-03-23T14:30:00Z",
+      "rastreavel": true
+    },
+    "tipo_transacao": {
+      "type": "string",
+      "description": "Tipo da transação: débito ou crédito",
+      "enum": ["debito", "credito"],
+      "example": "debito",
+      "rastreavel": true
+    },
+    "id_usuario": {
+      "type": "string",
+      "description": "Identificador único do usuário",
+      "minLength": 1,
+      "example": "user12345",
+      "rastreavel": true
+    },
+    "tipo_ordem": {
+      "type": "string",
+      "description": "Tipo de ordem: compra ou venda",
+      "enum": ["compra", "venda"],
+      "example": "compra",
+      "rastreavel": true
+    },
+    "tipo_ativo": {
+      "type": "string",
+      "description": "Tipo da moeda negociada (sigla em maiúsculas)",
+      "example": "BTC",
+      "rastreavel": true
+    },
+    "id_ordem": {
+      "type": "string",
+      "description": "Identificador único da ordem",
+      "minLength": 1,
+      "example": "ord56789",
+      "rastreavel": true
+    },
+    "status_ordem": {
+      "type": "string",
+      "description": "Status atual da operação",
+      "enum": ["pendente", "processando", "concluida", "cancelada"],
+      "example": "concluida",
+      "rastreavel": true
+    },
+    "status_safer": {
+      "type": "string",
+      "description": "Status da operação no sistema Safer",
+      "enum": ["aprovado", "reprovado", "em_analise", "pendente"],
+      "example": "aprovado",
+      "rastreavel": true
+    }
+  },
+  "additionalProperties": false
+}
