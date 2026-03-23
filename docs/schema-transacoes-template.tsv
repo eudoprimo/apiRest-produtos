@@ -1,0 +1,13 @@
+level	any.title	any.description	any.type	Lista	object.required	brad.business.label	any.enum	any.const
+0	body	Objeto raiz do evento de transação.	object	false	true	body		
+1	preco	Valor da transação. Usar ponto como separador decimal (ex.: 100000.75).	number	false	true	preco		
+1	quantidade_de_moedas	Quantidade de moedas negociadas na ordem.	number	false	true	quantidadeDeMoedas		
+1	criacao_ordem	Data e hora de criação da ordem no formato ISO 8601 (ex.: 2026-03-23T14:00:00Z).	string	false	true	criacaoOrdem		
+1	confirmacao_ordem	Data e hora de confirmação da ordem no formato ISO 8601 (ex.: 2026-03-23T14:01:10Z).	string	false	true	confirmacaoOrdem		
+1	tipo_transacao	Tipo da transação financeira.	string	false	true	tipoTransacao	debito|credito	
+1	id_usuario	Identificador do usuário no sistema (ID interno ou externo).	string	false	true	idUsuario		
+1	tipo_ordem	Tipo de ordem enviada ao mercado.	string	false	true	tipoOrdem	compra|venda	
+1	tipo_ativo	Símbolo do ativo negociado (ex.: BTC, ETH, USDT).	string	false	true	tipoAtivo		
+1	id_ordem	Identificador único da ordem no sistema.	string	false	true	idOrdem		
+1	status_ordem	Status atual da ordem no sistema.	string	false	true	statusOrdem	criada|confirmada|cancelada|falha	
+1	status_safer	Status da operação no Safer (sistema antifraude).	string	false	true	statusSafer	aprovado|reprovado|pendente	
