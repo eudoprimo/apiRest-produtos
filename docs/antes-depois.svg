@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="660" viewBox="0 0 900 660" font-family="Consolas, 'Courier New', monospace">
+
+  <!-- Background -->
+  <rect width="900" height="660" fill="#f8f9fa" rx="8"/>
+
+  <!-- Title -->
+  <text x="450" y="34" text-anchor="middle" font-size="17" font-weight="bold" fill="#1a1a2e">Antes × Depois — Aba Schema (bloco BCSF_SRV_*_RFQ_CL)</text>
+
+  <!-- ══════════════ BEFORE PANEL ══════════════ -->
+  <rect x="20" y="50" width="415" height="400" fill="#fff" stroke="#dc3545" stroke-width="2" rx="6"/>
+  <rect x="20" y="50" width="415" height="26" fill="#dc3545" rx="6"/>
+  <rect x="20" y="66" width="415" height="10" fill="#dc3545"/>
+  <text x="227" y="68" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">ANTES  (schema original)</text>
+
+  <!-- Before column headers -->
+  <rect x="28" y="84" width="399" height="17" fill="#dee2e6"/>
+  <text x="36" y="95" font-size="9" font-weight="bold" fill="#555">level  any.title               any.type  required</text>
+
+  <!-- bradesco/schema rows -->
+  <rect x="28" y="101" width="399" height="16" fill="#e8d5f5"/>
+  <text x="36" y="112" font-size="9" fill="#5b2c6f">      bradesco.rastreabilidade       ← config</text>
+
+  <rect x="28" y="117" width="399" height="16" fill="#e8d5f5"/>
+  <text x="36" y="128" font-size="9" fill="#5b2c6f">      schema.contabil                ← config</text>
+
+  <rect x="28" y="133" width="399" height="16" fill="#e8d5f5"/>
+  <text x="36" y="144" font-size="9" fill="#5b2c6f">      schema.produto                 ← config</text>
+
+  <rect x="28" y="149" width="399" height="16" fill="#e8d5f5"/>
+  <text x="36" y="160" font-size="9" fill="#5b2c6f">      schema.type = schema           ← config</text>
+
+  <rect x="28" y="165" width="399" height="16" fill="#e8d5f5"/>
+  <text x="36" y="176" font-size="9" fill="#5b2c6f">      schema.sistemico               ← config</text>
+
+  <rect x="28" y="181" width="399" height="16" fill="#e8d5f5"/>
+  <text x="36" y="192" font-size="9" fill="#5b2c6f">      schema.classificacao           ← config</text>
+
+  <!-- 0 body -->
+  <rect x="28" y="197" width="399" height="18" fill="#d4edda" stroke="#28a745"/>
+  <text x="36" y="210" font-size="10" font-weight="bold" fill="#155724">0  body                    object   true</text>
+
+  <!-- Existing 1-level rows -->
+  <rect x="28" y="215" width="399" height="16" fill="#f8d7da"/>
+  <text x="36" y="226" font-size="9" fill="#721c24">1  codigoTransacao         string   true</text>
+  <rect x="28" y="231" width="399" height="16" fill="#fff0f0"/>
+  <text x="36" y="242" font-size="9" fill="#721c24">1  mensagens               array    false</text>
+  <rect x="28" y="247" width="399" height="16" fill="#f8d7da"/>
+  <text x="36" y="258" font-size="9" fill="#721c24">1  retorno                 string   false</text>
+  <rect x="28" y="263" width="399" height="16" fill="#fff0f0"/>
+  <text x="36" y="274" font-size="9" fill="#721c24">1  resource                string   true</text>
+  <rect x="28" y="279" width="399" height="16" fill="#f8d7da"/>
+  <text x="36" y="290" font-size="9" fill="#721c24">1  service.name            string   true</text>
+  <rect x="28" y="295" width="399" height="16" fill="#fff0f0"/>
+  <text x="36" y="306" font-size="9" fill="#721c24">1  request                 object   false</text>
+
+  <!-- Annotation -->
+  <rect x="28" y="330" width="399" height="40" fill="#fff9c4" stroke="#f9a825" rx="4"/>
+  <text x="228" y="346" text-anchor="middle" font-size="10" fill="#5d4037">⚠  Campos de transação cripto</text>
+  <text x="228" y="360" text-anchor="middle" font-size="10" fill="#5d4037">ainda NÃO estão no schema</text>
+
+  <!-- JSON before -->
+  <rect x="28" y="378" width="399" height="64" fill="#f1f3f4" stroke="#ccc" rx="4"/>
+  <text x="36" y="393" font-size="9" fill="#555">JSON gerado (antes):</text>
+  <text x="36" y="408" font-size="9" fill="#333">{ "body": {</text>
+  <text x="36" y="421" font-size="9" fill="#333">    "codigoTransacao": "...",</text>
+  <text x="36" y="434" font-size="9" fill="#333">    "mensagens": [...], "retorno": "..." } }</text>
+
+  <!-- ══════════════ AFTER PANEL ══════════════ -->
+  <rect x="465" y="50" width="415" height="520" fill="#fff" stroke="#28a745" stroke-width="2" rx="6"/>
+  <rect x="465" y="50" width="415" height="26" fill="#28a745" rx="6"/>
+  <rect x="465" y="66" width="415" height="10" fill="#28a745"/>
+  <text x="672" y="68" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">DEPOIS  (com transação cripto)</text>
+
+  <!-- After column headers -->
+  <rect x="473" y="84" width="399" height="17" fill="#dee2e6"/>
+  <text x="481" y="95" font-size="9" font-weight="bold" fill="#555">level  any.title               any.type  required</text>
+
+  <!-- bradesco/schema rows (unchanged) -->
+  <rect x="473" y="101" width="399" height="16" fill="#e8d5f5"/>
+  <text x="481" y="112" font-size="9" fill="#5b2c6f">      bradesco.rastreabilidade       ← config</text>
+  <rect x="473" y="117" width="399" height="16" fill="#e8d5f5"/>
+  <text x="481" y="128" font-size="9" fill="#5b2c6f">      schema.contabil / .produto / .type / …</text>
+  <rect x="473" y="133" width="399" height="16" fill="#e8d5f5"/>
+  <text x="481" y="144" font-size="9" fill="#5b2c6f">      schema.sistemico / .classificacao</text>
+
+  <!-- 0 body (same, anchor) -->
+  <rect x="473" y="149" width="399" height="18" fill="#d4edda" stroke="#28a745"/>
+  <text x="481" y="162" font-size="10" font-weight="bold" fill="#155724">0  body                    object   true</text>
+
+  <!-- ── NEW ROWS ── -->
+  <rect x="473" y="167" width="399" height="16" fill="#cce5ff" stroke="#0d6efd" stroke-width="0.8"/>
+  <text x="481" y="178" font-size="9" font-weight="bold" fill="#004085">1  transacao               object   true  ← NOVO</text>
+
+  <rect x="473" y="183" width="399" height="16" fill="#e3f0ff" stroke="#0d6efd" stroke-width="0.5"/>
+  <text x="481" y="194" font-size="9" fill="#004085">2  preco                   number   true  ← NOVO</text>
+
+  <rect x="473" y="199" width="399" height="16" fill="#cce5ff" stroke="#0d6efd" stroke-width="0.5"/>
+  <text x="481" y="210" font-size="9" fill="#004085">2  quantidade_de_moedas    number   true  ← NOVO</text>
+
+  <rect x="473" y="215" width="399" height="16" fill="#e3f0ff" stroke="#0d6efd" stroke-width="0.5"/>
+  <text x="481" y="226" font-size="9" fill="#004085">2  criacao_ordem           string   true  ← NOVO</text>
+
+  <rect x="473" y="231" width="399" height="16" fill="#cce5ff" stroke="#0d6efd" stroke-width="0.5"/>
+  <text x="481" y="242" font-size="9" fill="#004085">2  confirmacao_ordem       string   true  ← NOVO</text>
+
+  <rect x="473" y="247" width="399" height="16" fill="#e3f0ff" stroke="#0d6efd" stroke-width="0.5"/>
+  <text x="481" y="258" font-size="9" fill="#004085">2  tipo_transacao          string   true  ← NOVO (enum: debito|credito)</text>
+
+  <rect x="473" y="263" width="399" height="16" fill="#cce5ff" stroke="#0d6efd" stroke-width="0.5"/>
+  <text x="481" y="274" font-size="9" fill="#004085">2  id_usuario              string   true  ← NOVO</text>
+
+  <rect x="473" y="279" width="399" height="16" fill="#e3f0ff" stroke="#0d6efd" stroke-width="0.5"/>
+  <text x="481" y="290" font-size="9" fill="#004085">2  tipo_ordem              string   true  ← NOVO (enum: compra|venda)</text>
+
+  <rect x="473" y="295" width="399" height="16" fill="#cce5ff" stroke="#0d6efd" stroke-width="0.5"/>
+  <text x="481" y="306" font-size="9" fill="#004085">2  tipo_ativo              string   true  ← NOVO</text>
+
+  <rect x="473" y="311" width="399" height="16" fill="#e3f0ff" stroke="#0d6efd" stroke-width="0.5"/>
+  <text x="481" y="322" font-size="9" fill="#004085">2  id_ordem                string   true  ← NOVO</text>
+
+  <rect x="473" y="327" width="399" height="16" fill="#cce5ff" stroke="#0d6efd" stroke-width="0.5"/>
+  <text x="481" y="338" font-size="9" fill="#004085">2  status_ordem            string   true  ← NOVO (enum: criada|…)</text>
+
+  <rect x="473" y="343" width="399" height="16" fill="#e3f0ff" stroke="#0d6efd" stroke-width="0.5"/>
+  <text x="481" y="354" font-size="9" fill="#004085">2  status_safer            string   true  ← NOVO (enum: aprovado|…)</text>
+
+  <!-- Existing rows (unchanged) -->
+  <rect x="473" y="363" width="399" height="14" fill="#f8d7da"/>
+  <text x="481" y="373" font-size="9" fill="#721c24">1  codigoTransacao (inalterado) …</text>
+  <rect x="473" y="377" width="399" height="14" fill="#fff0f0"/>
+  <text x="481" y="387" font-size="9" fill="#721c24">1  mensagens / retorno / resource / … (inalterados)</text>
+
+  <!-- JSON after -->
+  <rect x="473" y="398" width="399" height="160" fill="#f1f3f4" stroke="#ccc" rx="4"/>
+  <text x="481" y="413" font-size="9" fill="#555">JSON gerado (depois):</text>
+  <text x="481" y="428" font-size="9" fill="#333">{ "body": {</text>
+  <text x="481" y="441" font-size="9" font-weight="bold" fill="#004085">    "transacao": {</text>
+  <text x="481" y="454" font-size="9" font-weight="bold" fill="#004085">      "preco": 0,</text>
+  <text x="481" y="467" font-size="9" font-weight="bold" fill="#004085">      "quantidade_de_moedas": 0,</text>
+  <text x="481" y="480" font-size="9" font-weight="bold" fill="#004085">      "tipo_transacao": "debito",</text>
+  <text x="481" y="493" font-size="9" font-weight="bold" fill="#004085">      "status_ordem": "criada", … },</text>
+  <text x="481" y="506" font-size="9" fill="#333">    "codigoTransacao": "...",</text>
+  <text x="481" y="519" font-size="9" fill="#333">    "mensagens": [...], "retorno": "..." } }</text>
+
+  <!-- ══════════════ ARROW BETWEEN PANELS ══════════════ -->
+  <line x1="435" y1="260" x2="465" y2="260" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
+    </marker>
+  </defs>
+  <text x="450" y="255" text-anchor="middle" font-size="10" font-weight="bold" fill="#555">+12</text>
+  <text x="450" y="267" text-anchor="middle" font-size="9" fill="#555">linhas</text>
+
+  <!-- ══════════════ BOTTOM NOTES ══════════════ -->
+  <rect x="20" y="582" width="860" height="70" fill="#fff9c4" stroke="#f9a825" rx="6"/>
+  <text x="450" y="598" text-anchor="middle" font-size="12" font-weight="bold" fill="#5d4037">Regras importantes</text>
+  <text x="36" y="616" font-size="11" fill="#333">✔  Linhas bradesco.* e schema.* são CONFIGURAÇÃO — nunca removê-las nem colocá-las dentro do body.</text>
+  <text x="36" y="632" font-size="11" fill="#333">✔  Ao inserir linhas novas, sempre COPIE a linha anterior para herdar validações e fórmulas do Excel.</text>
+  <text x="36" y="648" font-size="11" fill="#333">✔  As 3 linhas de CABEÇALHO (topo da aba) nunca devem ser alteradas.</text>
+</svg>
