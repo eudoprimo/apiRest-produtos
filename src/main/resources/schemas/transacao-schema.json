@@ -1,0 +1,92 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/eudoprimo/apiRest-produtos/schemas/transacao-schema.json",
+  "title": "Transacao",
+  "description": "Schema de transação de criptomoedas",
+  "type": "object",
+  "required": [
+    "preco",
+    "quantidade_de_moedas",
+    "criacao_ordem",
+    "confirmacao_ordem",
+    "tipo_transacao",
+    "id_usuario",
+    "tipo_ordem",
+    "tipo_ativo",
+    "id_ordem",
+    "status_ordem",
+    "status_safer"
+  ],
+  "properties": {
+    "preco": {
+      "type": "number",
+      "description": "Valor unitário da criptomoeda no momento da transação (em BRL ou USD)",
+      "minimum": 0,
+      "exclusiveMinimum": true,
+      "example": 100000.75
+    },
+    "quantidade_de_moedas": {
+      "type": "number",
+      "description": "Quantidade de criptomoedas negociadas na ordem",
+      "minimum": 0,
+      "exclusiveMinimum": true,
+      "example": 2.5
+    },
+    "criacao_ordem": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Data e hora de criação da ordem no formato ISO 8601 (UTC)",
+      "example": "2026-03-23T14:00:00Z"
+    },
+    "confirmacao_ordem": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Data e hora de confirmação/liquidação da ordem no formato ISO 8601 (UTC)",
+      "example": "2026-03-23T14:30:00Z"
+    },
+    "tipo_transacao": {
+      "type": "string",
+      "description": "Tipo financeiro da movimentação: débito (saída de valor) ou crédito (entrada de valor)",
+      "enum": ["debito", "credito"],
+      "example": "debito"
+    },
+    "id_usuario": {
+      "type": "string",
+      "description": "Identificador único do usuário que realizou a transação",
+      "minLength": 1,
+      "example": "user12345"
+    },
+    "tipo_ordem": {
+      "type": "string",
+      "description": "Tipo da ordem executada: compra ou venda",
+      "enum": ["compra", "venda"],
+      "example": "compra"
+    },
+    "tipo_ativo": {
+      "type": "string",
+      "description": "Símbolo/ticker da criptomoeda negociada (ex: BTC, ETH, USDT)",
+      "minLength": 2,
+      "maxLength": 10,
+      "example": "BTC"
+    },
+    "id_ordem": {
+      "type": "string",
+      "description": "Identificador único da ordem gerado pelo sistema",
+      "minLength": 1,
+      "example": "ord56789"
+    },
+    "status_ordem": {
+      "type": "string",
+      "description": "Status de execução da ordem na exchange",
+      "enum": ["pendente", "em_processamento", "concluida", "cancelada", "falha"],
+      "example": "concluida"
+    },
+    "status_safer": {
+      "type": "string",
+      "description": "Status da avaliação de risco/compliance da transação no sistema Safer",
+      "enum": ["pendente", "aprovado", "reprovado", "em_analise"],
+      "example": "aprovado"
+    }
+  },
+  "additionalProperties": false
+}
