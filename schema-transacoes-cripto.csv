@@ -1,0 +1,12 @@
+Nome do Campo,Nome Técnico,Descrição,Tipo,Rastreabilidade,Obrigatoriedade,Lista de Valores,Valor Mínimo,Valor Máximo,Formato,Exemplo
+Preço,preco,Valor monetário da transação de criptomoeda em reais (BRL),number,sim,obrigatório,,0.01,,0.00,15000.50
+Quantidade de Moedas,quantidade_de_moedas,Quantidade de moedas negociadas na transação,number,sim,obrigatório,,0.00000001,,0.00000000,0.05000000
+Data de Criação da Ordem,criacao_ordem,Data e hora em que a ordem foi criada no sistema,datetime,sim,obrigatório,,,,"yyyy-MM-dd'T'HH:mm:ss",2024-01-15T10:30:00
+Data de Confirmação da Ordem,confirmacao_ordem,Data e hora em que a ordem foi confirmada pelo sistema,datetime,sim,opcional,,,,"yyyy-MM-dd'T'HH:mm:ss",2024-01-15T10:31:05
+Tipo de Transação,tipo_transacao,Indica se a transação é um débito ou crédito na carteira do usuário,string,sim,obrigatório,"debito,credito",,,,"debito"
+Identificador do Usuário,id_usuario,Código único que identifica o usuário que realizou a transação,string,sim,obrigatório,,,,,"USR-00123"
+Tipo de Ordem,tipo_ordem,Indica se a ordem é de compra ou venda de criptomoeda,string,sim,obrigatório,"compra,venda",,,,"compra"
+Tipo de Ativo,tipo_ativo,Sigla da criptomoeda negociada na transação,string,sim,obrigatório,"BTC,ETH,USDT,BNB",,,,"BTC"
+Identificador da Ordem,id_ordem,Código único que identifica a ordem de transação,string,sim,obrigatório,,,,,"ORD-20240115-001"
+Status da Ordem,status_ordem,Status atual da ordem no sistema de transações,string,sim,obrigatório,"pendente,processando,concluida,cancelada,erro",,,,"concluida"
+Status Safer,status_safer,Status da operação no sistema de análise de risco Safer,string,sim,obrigatório,"aprovado,reprovado,pendente_analise,em_analise",,,,"aprovado"
